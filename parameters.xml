@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Parameters maneuver="Docking" motion="0" xgridi="0" ygridi="0" xgridsize="2" ygridsize="1">
+
+
+<RangeSensors n = "4" eta = "0" mi ="0" sigma = "0.05"> </RangeSensors>
+
+<AngleSensors n = "0" eta = "0.001" mi ="0" sigma = "0.005"></AngleSensors>
+
+
+<TOASensors n = "0" eta = "0.0000001" mi ="0" sigma = "0.0000005"></TOASensors>
+
+
+<TDOASensors n = "0" eta = "0.000001" mi ="0" sigma = "0.000005"></TDOASensors>
+
+
+<Kalman>
+
+ <RangePeriod period = "1"> </RangePeriod>
+
+ <AnglePeriod period = "1"> </AnglePeriod>
+
+ <TOAPeriod period = "5"> </TOAPeriod>
+ 
+ <TDOAPeriod period = "5"> </TDOAPeriod>
+
+
+ <R> 
+ <data value = "50"> </data> 
+ <data value = "50"> </data> 
+ <data value = "50"> </data> 
+ </R>
+
+ <QRange size= "12">  
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  <data value ="5">  </data> 
+  </QRange>
+
+ <QAngle size= "8">
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+  <data value ="0.00025">  </data> 
+ </QAngle>
+ 
+ 
+ 
+ <QTOA size= "4">
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+ </QTOA>
+ 
+ 
+ <QTDOA size= "4">
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+  <data value ="0.000033">  </data> 
+ </QTDOA>
+
+
+</Kalman>
+   
+   
+<GA popSize = "5000" GAiter = "2000" LocalSearchVersion = "2" LocalSearchiter = "10000" alphaM= "0.2" alphaP= "0.2" criteria= "A" weights="0">
+</GA>
+
+
+</Parameters>
+
